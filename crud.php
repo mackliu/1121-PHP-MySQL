@@ -14,9 +14,33 @@ td{
     border:1px solid lightblue;
     padding:5px 8px;
 }
+a.btn{
+    border: 1px solid lightgreen;
+    padding: 5px 15px;
+    border-radius: 7px;
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 2px 2px 10px green;
+    background-color: deepskyblue;
+    color: white;
+    text-decoration:none;
+    position:relative;
+    top:0px;
+    transition:all 0.5s;
+}
+
+a.btn:hover{
+    text-decoration:underline;
+    background-color: skyblue;
+    position:relative;
+    top:-5px;
+    transform:scale(1.1);
+    transition:all 0.5s;
+} 
 </style>
 
 <h1>學生列表</h1>
+<a class='btn' href="insert_form.php">新增學生資料</a>
 <table>
     <tr>
         <td>序號</td>
@@ -34,7 +58,7 @@ td{
         <td>刪除</td>
     </tr>
     <?php
-        $sql="select * from students ";
+        $sql="select * from students order by id desc ";
         $rows=$pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
         foreach($rows as  $row){
     ?>
