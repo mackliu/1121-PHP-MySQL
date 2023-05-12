@@ -30,6 +30,8 @@ td{
         <td>電話</td>
         <td>科別</td>
         <td>畢業國中</td>
+        <td>編輯</td>
+        <td>刪除</td>
     </tr>
     <?php
         $sql="select * from students ";
@@ -48,6 +50,8 @@ td{
         <td><?=$row['telphone'];?></td>
         <td><?=$row['major'];?></td>
         <td><?=$row['secondary'];?></td>
+        <td>編輯</td>
+        <td><a href='del.php?id=<?=$row['id'];?>'>刪除</a></td>
     </tr>
     <?php
     }
