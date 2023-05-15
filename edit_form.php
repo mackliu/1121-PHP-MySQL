@@ -60,6 +60,7 @@ $row=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     <input type="text" name="secondary" value="<?=$row['secondary'];?>">
 </div>
 <div>
+    <input type="hidden" name="id" value="<?=$row['id'];?>">
     <input type="submit" value="編輯"><input type="reset" value="取消">
 </div>
 
