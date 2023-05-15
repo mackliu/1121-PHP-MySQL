@@ -15,8 +15,9 @@ echo "</pre>"; */
 //echo $chk;
 if($chk){
     echo "登入成功";
+    header("location:index.html");
+    
 }else{
     echo "登入失敗，帳號或密碼錯誤";
+    header("location:login_form.php?error=1");
 }
-
-header("location:index.html");
