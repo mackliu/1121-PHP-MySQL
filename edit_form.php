@@ -20,6 +20,9 @@ $row=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
 <form action="edit.php" method="post">
 
 <div>
+    <lable>編號：</lable><?=$row['id'];?>
+</div>
+<div>
     <lable>學號</lable>
     <input type="text" name="uni_id" value="<?=$row['uni_id'];?>">
 </div>
